@@ -75,7 +75,7 @@ class TorrentCard extends Component {
 
           <div className=" d-flex justify-content-center pb-3">
             <button
-              className="btn btn-outline-info"
+              className="btn btn-outline-danger"
               type="button"
               data-toggle="collapse"
               data-target={"#c" + this.props.Key}

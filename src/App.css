@@ -21,6 +21,11 @@ button.search-button {
   box-shadow: red !important;
 }
 
+.nav-custom-link,
+.nav-custom-link:hover {
+  color: red;
+}
+
 input[type="text"].form-control:focus {
   border-color: red;
   border-width: 2px;

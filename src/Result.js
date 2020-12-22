@@ -9,7 +9,7 @@ function Result(props) {
       return (
         <li className="nav-item" Key={`nav${e.website}${index.toString}`}>
           <a
-            className={`nav-link ${isActive}`}
+            className={`nav-link ${isActive} nav-custom-link`}
             id={`nav-${e.website}-tab`}
             data-toggle="tab"
             href={`#k${e.website}`}
