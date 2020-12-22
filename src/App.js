@@ -11,7 +11,7 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const query = document.getElementById("search-input").value;
-    if (query !== "" || query !== undefined) {
+    if (query.trim().length > 0) {
       this.setState({
         show_result: true,
         search_query: query,
