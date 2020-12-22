@@ -45,7 +45,11 @@ class TorrentCard extends Component {
         ></div>
       );
     } else {
-      return <div className="limit-word">{this.state.magnetUrl}</div>;
+      return (
+        <a href={this.state.magnetUrl}>
+          <div className="limit-word">{this.state.magnetUrl}</div>
+        </a>
+      );
     }
   };
 
