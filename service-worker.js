@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/torrent-search-web/precache-manifest.c74aa76e11ec1c052b78e0f0e533d292.js"
+  "/torrent-search-web/precache-manifest.fb1da4e355a4056dcb84d50b5620a103.js"
 );
 
 self.addEventListener('message', (event) => {
