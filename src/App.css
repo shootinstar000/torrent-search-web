@@ -26,6 +26,18 @@ button.search-button {
   color: red;
 }
 
+footer.page-footer {
+  bottom: 0;
+}
+
+div.social-icons {
+  font-size: 30px;
+}
+
+a.social-custom-link {
+  text-decoration: none;
+}
+
 input[type="text"].form-control:focus {
   border-color: red;
   border-width: 2px;
