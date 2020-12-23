@@ -48,10 +48,10 @@ export const indexer = [
     website: "torrentdownloads",
   },
 
-  // {
-  //   endpoint: "tgx",
-  //   website: "TorrentGalaxy",
-  // },
+  {
+    endpoint: "tgx",
+    website: "TorrentGalaxy",
+  },
 
   {
     endpoint: "yts",
