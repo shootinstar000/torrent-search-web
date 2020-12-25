@@ -62,17 +62,21 @@ class TorrentTab extends Component {
     } else if (this.state.server_error) {
       return <ServerError />;
     } else {
-      return this.state.torrents.map((e, index) => {
-        return (
-          <div>
-            <TorrentCard
-              torrent={e}
-              Key={`${this.props.website}${index.toString()}`}
-            />
-            <br></br>
-          </div>
-        );
-      });
+      return (
+        <div className="row">
+          {this.state.torrents.map((e, index) => {
+            return (
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <TorrentCard
+                  torrent={e}
+                  Key={`${this.props.website}${index.toString()}`}
+                />
+                <br></br>
+              </div>
+            );
+          })}
+        </div>
+      );
     }
   }
 }
