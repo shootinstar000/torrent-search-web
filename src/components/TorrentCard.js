@@ -49,7 +49,7 @@ class TorrentCard extends Component {
 
   render() {
     return (
-      <div className="border-black Br-10px elevated-card grey-bg">
+      <div className="border-black Br-10px elevated-card grey-bg ">
         <div
           className="text-center p-3"
           style={{
@@ -58,7 +58,7 @@ class TorrentCard extends Component {
         >
           <strong>{this.props.torrent.name}</strong>
         </div>
-        <div className="col pb-3 p-2 justify-content-center">
+        <div className="col justify-content-center pr-3 pl-3 pt-4 pb-4">
           <div className="row justify-content-around">
             <div className="col">
               <span>
@@ -79,7 +79,7 @@ class TorrentCard extends Component {
               </span>
             </div>
           </div>
-          <div className="row justify-content-around">
+          <div className="row justify-content-around p2">
             <span>
               <span className="font-weight-bold">Uploader: </span>
               {this.props.torrent.uploader}
