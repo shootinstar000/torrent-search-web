@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import Axios from "axios";
-import * as Constants from "../Constants";
 import { getMagnetLink } from "../utils/network_utils";
 
 class TorrentCard extends Component {
-  onCopyToClipboard(e) {
-    console.log(e);
-  }
-
   onMangetBtnClick = (e) => {
     this.onCopyToClipboard(e);
     getMagnetLink(

@@ -32,7 +32,6 @@ class TorrentTab extends Component {
           this.setState({
             torrents: res.data["data"],
           });
-          console.log(this.state);
         } else if (res.status === 204) {
           this.setState({
             no_content_found: true,
