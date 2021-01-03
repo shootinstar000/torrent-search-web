@@ -109,16 +109,22 @@ input[type="text"].form-control:focus {
 .body-dark {
   background: black;
   transition: all 1s;
+  color: rgb(172, 172, 172);
 }
 
 .body-light {
   transition: all 1s;
 }
 
+body.body-dark button.dark-mode-button {
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-top: 3em;
+  color: rgb(172, 172, 172);
+}
 body.body-dark .elevated-card {
   transition: 0.3s;
   background: #121212;
-  color: grey;
 }
 
 body.body-dark .elevated-card:hover {
@@ -147,7 +153,7 @@ body.body-dark .dark-mode-button:active {
 
 body.body-dark .social-icons {
   font-size: 30px;
-  color: gray !important;
+  color: rgb(172, 172, 172) !important;
 }
 
 body.body-dark .card-title-custom {
