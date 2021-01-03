@@ -3,7 +3,6 @@ import { getMagnetLink } from "../utils/network_utils";
 
 class TorrentCard extends Component {
   onMangetBtnClick = (e) => {
-    this.onCopyToClipboard(e);
     getMagnetLink(
       this.props.torrent.website.toLowerCase(),
       this.props.torrent.torrent_url
