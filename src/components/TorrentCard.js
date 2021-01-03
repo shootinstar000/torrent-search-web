@@ -49,12 +49,7 @@ class TorrentCard extends Component {
   render() {
     return (
       <div className="border-black Br-10px elevated-card grey-bg ">
-        <div
-          className="text-center p-3"
-          style={{
-            background: "rgba(0, 0, 0, 0.03)",
-          }}
-        >
+        <div className="text-center p-3 card-title-custom">
           <strong>{this.props.torrent.name}</strong>
         </div>
         <div className="col justify-content-center pr-3 pl-3 pt-4 pb-4">

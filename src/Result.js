@@ -30,7 +30,7 @@ function Result(props) {
       return (
         <div
           id={`k${e.website}`}
-          className={`container tab-pane ${isActive}`}
+          className={`container-fluid tab-pane ${isActive}`}
           role="tabpanel"
           aria-labelledby="nav-home-tab"
         >
@@ -47,10 +47,10 @@ function Result(props) {
     });
   };
   return (
-    <div className="container mt-5">
+    <div className="container-fluid mt-5">
       <h2>Search Result for {props.query}</h2>
       <br></br>
-      <div className="justify-content-center">
+      <div className="d-flex justify-content-center">
         <ul className="nav nav-tabs" role="tablist">
           <NavTabs />
         </ul>

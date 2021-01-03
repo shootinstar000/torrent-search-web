@@ -65,7 +65,7 @@ class TorrentTab extends Component {
         <div className="row">
           {this.state.torrents.map((e, index) => {
             return (
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <TorrentCard
                   torrent={e}
                   Key={`${this.props.website}${index.toString()}`}
