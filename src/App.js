@@ -20,6 +20,14 @@ class App extends Component {
     }
   };
 
+  componentDidMount() {
+    $("#search-input").on("keypress", function (e) {
+      if (e.key === "Enter") {
+        $("#btn-submit").trigger("click");
+      }
+    });
+  }
+
   toggleDarkMode = (e) => {
     $("body").toggleClass("body-dark");
     $("body").toggleClass("body-light");
