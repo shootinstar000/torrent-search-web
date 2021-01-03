@@ -104,7 +104,7 @@ class App extends Component {
                   href="mailto:tejasvp25@gmail.com"
                   className="social-custom-link"
                 >
-                  <i class="devicon-google-plain social-icons"></i>
+                  <i className="devicon-google-plain social-icons"></i>
                 </a>
               </div>
             </div>
