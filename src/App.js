@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Result from "./Result";
 import "./App.css";
 import $ from "jquery";
-
+import Cookies from "js-cookie";
 class App extends Component {
   state = {
     show_result: false,
@@ -31,6 +31,11 @@ class App extends Component {
   toggleDarkMode = (e) => {
     $("body").toggleClass("body-dark");
     $("body").toggleClass("body-light");
+    if ($("body").hasClass("body-dark")) {
+      Cookies.set("dark", 1);
+    } else {
+      Cookies.set("dark", 0);
+    }
   };
 
   render() {
