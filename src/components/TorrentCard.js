@@ -73,19 +73,28 @@ class TorrentCard extends Component {
               </span>
             </div>
           </div>
-          <div className="row justify-content-around p2">
-            <span>
-              <span className="font-weight-bold">Uploader: </span>
-              {this.props.torrent.uploader}
-            </span>
-            <span>
-              <span className="font-weight-bold">Website: </span>
-              {this.props.torrent.website}
-            </span>
-            <span>
-              <span className="font-weight-bold">Size: </span>
-              {this.props.torrent.size}
-            </span>
+          {/* <br /> */}
+          <div className="row justify-content-around p2 mt-2">
+            <div className="col">
+              <span>
+                <span className="font-weight-bold">Uploader: </span>
+                {this.props.torrent.uploader}
+              </span>
+            </div>
+
+            <div className="col">
+              <span>
+                <span className="font-weight-bold">Website: </span>
+                {this.props.torrent.website}
+              </span>
+            </div>
+
+            <div className="col">
+              <span>
+                <span className="font-weight-bold">Size: </span>
+                {this.props.torrent.size}
+              </span>
+            </div>
           </div>
         </div>
 
