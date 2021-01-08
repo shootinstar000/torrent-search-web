@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/torrent-search-web/static/css/main.b0060d01.chunk.css",
-    "main.js": "/torrent-search-web/static/js/main.041f157a.chunk.js",
-    "main.js.map": "/torrent-search-web/static/js/main.041f157a.chunk.js.map",
+    "main.css": "/torrent-search-web/static/css/main.4d366418.chunk.css",
+    "main.js": "/torrent-search-web/static/js/main.6fddf9a3.chunk.js",
+    "main.js.map": "/torrent-search-web/static/js/main.6fddf9a3.chunk.js.map",
     "runtime-main.js": "/torrent-search-web/static/js/runtime-main.c9d9ffb6.js",
     "runtime-main.js.map": "/torrent-search-web/static/js/runtime-main.c9d9ffb6.js.map",
     "static/js/2.beacb2bc.chunk.js": "/torrent-search-web/static/js/2.beacb2bc.chunk.js",
     "static/js/2.beacb2bc.chunk.js.map": "/torrent-search-web/static/js/2.beacb2bc.chunk.js.map",
     "index.html": "/torrent-search-web/index.html",
-    "precache-manifest.f1e3c4e51c2a54cf745544f4b9e7acfa.js": "/torrent-search-web/precache-manifest.f1e3c4e51c2a54cf745544f4b9e7acfa.js",
+    "precache-manifest.2e34834eb53ea56f1674621c15a02f2a.js": "/torrent-search-web/precache-manifest.2e34834eb53ea56f1674621c15a02f2a.js",
     "service-worker.js": "/torrent-search-web/service-worker.js",
-    "static/css/main.b0060d01.chunk.css.map": "/torrent-search-web/static/css/main.b0060d01.chunk.css.map",
+    "static/css/main.4d366418.chunk.css.map": "/torrent-search-web/static/css/main.4d366418.chunk.css.map",
     "static/js/2.beacb2bc.chunk.js.LICENSE.txt": "/torrent-search-web/static/js/2.beacb2bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9d9ffb6.js",
     "static/js/2.beacb2bc.chunk.js",
-    "static/css/main.b0060d01.chunk.css",
-    "static/js/main.041f157a.chunk.js"
+    "static/css/main.4d366418.chunk.css",
+    "static/js/main.6fddf9a3.chunk.js"
   ]
 }
