@@ -107,9 +107,9 @@ input[type="text"].form-control:focus {
 }
 
 .body-dark {
-  background: black;
+  background: #111111;
   transition: all 1s;
-  color: rgb(172, 172, 172);
+  color: rgb(255, 254, 254) !important;
 }
 
 .body-light {
@@ -124,7 +124,7 @@ body.body-dark button.dark-mode-button {
 }
 body.body-dark .elevated-card {
   transition: 0.3s;
-  background: #121212;
+  background: #181818;
 }
 
 body.body-dark .elevated-card:hover {
@@ -132,7 +132,7 @@ body.body-dark .elevated-card:hover {
 }
 
 body.body-dark .nav-link.active {
-  background-color: #121212 !important;
+  background-color: #181818 !important;
   border: none !important;
 }
 
@@ -145,7 +145,7 @@ body.body-dark .dark-mode-button:active {
   padding-left: 3em;
   padding-right: 3em;
   margin-top: 3em;
-  background-color: #121212 !important;
+  background-color: #181818 !important;
   border: none !important;
   border-color: none !important;
   box-shadow: none;
