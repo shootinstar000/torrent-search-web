@@ -75,6 +75,15 @@ input[type="text"].form-control:focus {
   color: #61dafb;
 }
 
+span.font-small {
+  font-size: 0.8em;
+  color: gray;
+}
+
+span.font-weight-bold {
+  font-size: 1em;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
