@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/torrent-search-web/static/css/main.6264e05e.chunk.css",
+    "main.css": "/torrent-search-web/static/css/main.b0060d01.chunk.css",
     "main.js": "/torrent-search-web/static/js/main.041f157a.chunk.js",
     "main.js.map": "/torrent-search-web/static/js/main.041f157a.chunk.js.map",
     "runtime-main.js": "/torrent-search-web/static/js/runtime-main.c9d9ffb6.js",
@@ -8,15 +8,15 @@
     "static/js/2.beacb2bc.chunk.js": "/torrent-search-web/static/js/2.beacb2bc.chunk.js",
     "static/js/2.beacb2bc.chunk.js.map": "/torrent-search-web/static/js/2.beacb2bc.chunk.js.map",
     "index.html": "/torrent-search-web/index.html",
-    "precache-manifest.12ddf9a772038929be4c156da9b8a9ef.js": "/torrent-search-web/precache-manifest.12ddf9a772038929be4c156da9b8a9ef.js",
+    "precache-manifest.f1e3c4e51c2a54cf745544f4b9e7acfa.js": "/torrent-search-web/precache-manifest.f1e3c4e51c2a54cf745544f4b9e7acfa.js",
     "service-worker.js": "/torrent-search-web/service-worker.js",
-    "static/css/main.6264e05e.chunk.css.map": "/torrent-search-web/static/css/main.6264e05e.chunk.css.map",
+    "static/css/main.b0060d01.chunk.css.map": "/torrent-search-web/static/css/main.b0060d01.chunk.css.map",
     "static/js/2.beacb2bc.chunk.js.LICENSE.txt": "/torrent-search-web/static/js/2.beacb2bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9d9ffb6.js",
     "static/js/2.beacb2bc.chunk.js",
-    "static/css/main.6264e05e.chunk.css",
+    "static/css/main.b0060d01.chunk.css",
     "static/js/main.041f157a.chunk.js"
   ]
 }
