@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "faba5129dc0a5484ec71297c62d835fa",
+    "revision": "7149052be7d288e6c812e7a85ea0dfc2",
     "url": "/torrent-search-web/index.html"
   },
   {
-    "revision": "231b8f7f95a71b2bab31",
+    "revision": "5648d0e73ac775c30673",
     "url": "/torrent-search-web/static/css/main.4d366418.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/torrent-search-web/static/js/2.beacb2bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "231b8f7f95a71b2bab31",
-    "url": "/torrent-search-web/static/js/main.6fddf9a3.chunk.js"
+    "revision": "5648d0e73ac775c30673",
+    "url": "/torrent-search-web/static/js/main.ee24a638.chunk.js"
   },
   {
     "revision": "1f805d2771630bab1587",
