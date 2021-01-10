@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TorrentCard from "./TorrentCard";
 import { getTorrents } from "../utils/network_utils";
 import { NoContentFound, ServerError } from "../components/CustomError";
+import ClipLoader from "react-spinners/ClipLoader";
 class TorrentTab extends Component {
   PROXY_URL = "https://cors-anywhere.herokuapp.com/";
   state = {
@@ -52,10 +53,8 @@ class TorrentTab extends Component {
       return <NoContentFound />;
     } else if (this.state.torrents === undefined) {
       return (
-        <div className="d-flex justify-content-center">
-          <div class="spinner-border text-dark" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
+        <div className="container p-5">
+          <ClipLoader color="red" />
         </div>
       );
     } else if (this.state.server_error) {
