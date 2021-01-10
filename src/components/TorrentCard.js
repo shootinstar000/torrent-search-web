@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import { getMagnetLink } from "../utils/network_utils";
 import ClipLoader from "react-spinners/ClipLoader";
 class TorrentCard extends Component {
+  copyToClipBoard = (e) => {
+    var mgDiv = document.getElementById(this.state.mgid);
+    let selection = window.getSelection();
+    let range = document.createRange();
+    range.selectNodeContents(mgDiv);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand("copy");
+    selection.removeAllRanges();
+  };
+
   onMangetBtnClick = (e) => {
     getMagnetLink(
       this.props.torrent.website.toLowerCase(),
@@ -22,13 +33,11 @@ class TorrentCard extends Component {
 
   state = {
     magnetUrl: this.props.torrent.magnet,
-
-    // magnetUrl: "",
-    // loading: "true",
     loading: false,
+    mgid: "mg" + this.props.Key,
   };
 
-  bottomLayout = (prop) => {
+  BottomLayout = (prop) => {
     if (this.state.loading === true || this.state.magnetUrl === "") {
       return (
         <div className="container p-5">
@@ -38,7 +47,9 @@ class TorrentCard extends Component {
     } else {
       return (
         <a href={this.state.magnetUrl}>
-          <div className="limit-word p-2">{this.state.magnetUrl}</div>
+          <div className="limit-word p-2" id={this.state.mgid}>
+            {this.state.magnetUrl}
+          </div>
         </a>
       );
     }
@@ -97,7 +108,7 @@ class TorrentCard extends Component {
           </div>
         </div>
 
-        <div className=" d-flex justify-content-center pb-3">
+        <div className="row justify-content-around pb-3">
           <button
             className="btn btn-outline-danger"
             type="button"
@@ -109,14 +120,21 @@ class TorrentCard extends Component {
           >
             Magnet Link
           </button>
+
+          {this.state.magnetUrl !== "" ? (
+            <button
+              className="btn btn-outline-danger"
+              type="button"
+              onClick={this.copyToClipBoard}
+            >
+              Copy to Clipboard
+            </button>
+          ) : null}
         </div>
         <div className="collapse" id={"c" + this.props.Key}>
           <div className="row justify-content-around pb-3">
-            {/* <div className="col text-center">
-            <strong>Loading...</strong>
-          </div> */}
             <div className="col text-center">
-              <this.bottomLayout />
+              <this.BottomLayout />
             </div>
           </div>
         </div>
