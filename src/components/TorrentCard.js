@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getMagnetLink } from "../utils/network_utils";
-
+import ClipLoader from "react-spinners/ClipLoader";
 class TorrentCard extends Component {
   onMangetBtnClick = (e) => {
     getMagnetLink(
@@ -31,11 +31,9 @@ class TorrentCard extends Component {
   bottomLayout = (prop) => {
     if (this.state.loading === true || this.state.magnetUrl === "") {
       return (
-        <div
-          className="spinner-border ml-auto"
-          role="status"
-          aria-hidden="true"
-        ></div>
+        <div className="container p-5">
+          <ClipLoader color="red" />
+        </div>
       );
     } else {
       return (

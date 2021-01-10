@@ -142,7 +142,12 @@ body.body-dark .elevated-card:hover {
 
 body.body-dark .nav-link.active {
   background-color: #181818 !important;
-  border: none !important;
+  border-color: #121212;
+  border-radius: 0.25rem;
+}
+
+body.body-dark .nav-tabs {
+  border-bottom: none !important;
 }
 
 body.body-dark .nav-link:hover {
