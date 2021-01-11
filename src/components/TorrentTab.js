@@ -6,24 +6,10 @@ import ClipLoader from "react-spinners/ClipLoader";
 class TorrentTab extends Component {
   PROXY_URL = "https://cors-anywhere.herokuapp.com/";
   state = {
-    // torrents: [
-    // {
-    //   name: "Avengers: Endgame (2019) [WEBRip] [1080p] [YTS] [YIFY]26",
-    //   torrent_url:
-    //     "https://1337x.to/torrent/3911065/Avengers-Endgame-2019-WEBRip-1080p-YTS-YIFY/",
-    //   seeders: "27340",
-    //   leechers: "17654",
-    //   upload_date: "Jul. 29th '19",
-    //   size: "3.0 GB",
-    //   uploader: "YTSAGx",
-    //   magnet: "",
-    //   website: "1337x",
-    //   torrent_file_url: "",
-    // },
-    // ],
     torrents: undefined,
     no_content_found: false,
     server_error: false,
+    server_is_waking: false,
   };
 
   componentDidMount() {
@@ -46,13 +32,33 @@ class TorrentTab extends Component {
       .catch((err) => {
         console.log(err);
       });
+
+    setTimeout(this.setServerIsWaking, 10000);
   }
+
+  setServerIsWaking = () => {
+    if (this.state.torrents === undefined) {
+      this.setState({
+        server_is_waking: true,
+      });
+    }
+  };
 
   render() {
     if (this.state.no_content_found) {
       return <NoContentFound />;
     } else if (this.state.torrents === undefined) {
-      return (
+      return this.state.server_is_waking ? (
+        <div className="container p-5">
+          <div className="col">
+            <h4 className="text-monospace text-muted">
+              Sorry for inconvenience <br /> Wait for Few Seconds while server
+              is Waking
+            </h4>
+            <ClipLoader color="red" />
+          </div>
+        </div>
+      ) : (
         <div className="container p-5">
           <ClipLoader color="red" />
         </div>
