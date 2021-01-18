@@ -99,6 +99,11 @@ span.font-weight-bold {
 .Br-10px {
   border-radius: 10px;
 }
+
+.br-10px-top {
+  border-radius: 10px 10px 0px 0px;
+}
+
 .card-title-custom {
   background: rgba(0, 0, 0, 0.03);
 }
