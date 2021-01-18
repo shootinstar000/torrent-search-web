@@ -61,49 +61,72 @@ class TorrentCard extends Component {
         <div className="text-center p-3 card-title-custom br-10px-top">
           <strong>{this.props.torrent.name}</strong>
         </div>
-        <div className="col justify-content-center pr-3 pl-3 pt-4 pb-4">
+        <div className="justify-content-center pr-3 pl-3 pt-4 pb-4">
           <div className="row justify-content-around">
             <div className="col">
-              <span className="font-small">Leechers: </span>
-              <span className="font-weight-bold">
-                {this.props.torrent.leechers}
-              </span>
+              <div>
+                <span className="font-small">Leechers</span>
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.leechers}
+                </span>
+              </div>
             </div>
             <div className="col">
-              <span className="font-small">Seeders: </span>
-              <span className="font-weight-bold">
-                {this.props.torrent.seeders}
-              </span>
+              <div>
+                <span className="font-small">Seeders</span>
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.seeders}
+                </span>
+              </div>
             </div>
           </div>
-          {/* <br /> */}
           <div className="row justify-content-around p2 mt-2">
             <div className="col">
-              <span className="font-small">Website: </span>
-              <span className="font-weight-bold">
-                {this.props.torrent.website}
-              </span>
+              <div>
+                <span className="font-small">Website</span>
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.website}
+                </span>
+              </div>
             </div>
 
             <div className="col">
-              <span className="font-small">Size: </span>{" "}
-              <span className="font-weight-bold">
-                {this.props.torrent.size}
-              </span>
+              <div>
+                <span className="font-small">Size</span>{" "}
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.size}
+                </span>
+              </div>
             </div>
           </div>
           <div className="row justify-content-around p2 mt-2">
             <div className="col">
-              <span className="font-small">Uploaded On: </span>
-              <span className="font-weight-bold">
-                {this.props.torrent.upload_date}
-              </span>
+              <div>
+                <span className="font-small">Uploaded On</span>
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.upload_date}
+                </span>
+              </div>
             </div>
             <div className="col">
-              <span className="font-small">Uploader: </span>
-              <span className="font-weight-bold">
-                {this.props.torrent.uploader}
-              </span>
+              <div>
+                <span className="font-small">Uploader</span>
+              </div>
+              <div>
+                <span className="font-weight-bold">
+                  {this.props.torrent.uploader}
+                </span>
+              </div>
             </div>
           </div>
         </div>
