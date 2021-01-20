@@ -68,8 +68,7 @@ module.exports = (env, argv) => {
     config.entry = ["./src"];
     config.devtool = "source-map";
     config.output.filename = "[name].[chunkhash].bundle.js";
-    config.output.publicPath =
-      "https://Torrent-Search.github.io/torrent-search-web";
+    config.output.publicPath = "/";
     config.output.chunkFilename = "[name].[chunkhash].bundle.js";
     config.optimization = {
       moduleIds: "hashed",
@@ -103,6 +102,10 @@ module.exports = (env, argv) => {
     };
   }
 
+  if (env === "production-gh") {
+    config.output.publicPath = "/torrent-search-web";
+  }
+  console.log(config.output.publicPath);
   console.log("Webpack config\n");
 
   return config;
