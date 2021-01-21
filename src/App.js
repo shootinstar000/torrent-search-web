@@ -258,6 +258,13 @@ class App extends Component {
             </div>{" "}
           </div>
           <this.TermsAndConditionsLayout />
+          <a href="https://www.buymeacoffee.com/tejasvp25" target="_blank">
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png"
+              alt="Buy Me A Coffee"
+              className="bmc mt-3"
+            />
+          </a>
         </footer>
       </div>
     );
