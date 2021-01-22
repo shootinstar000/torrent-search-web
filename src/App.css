@@ -185,3 +185,8 @@ body.body-dark .social-icons {
 body.body-dark .card-title-custom {
   background: rgba(255, 255, 255, 0.03);
 }
+
+body.body-dark .form-control {
+  background-color: #181818;
+  color: rgb(172, 172, 172) !important;
+}
