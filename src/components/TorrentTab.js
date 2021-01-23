@@ -1,8 +1,18 @@
-import React, { Component } from "react";
-import TorrentCard from "./TorrentCard";
+import React, { Component, Suspense, lazy } from "react";
+
 import { getTorrents } from "../utils/network_utils";
-import { NoContentFound, ServerError } from "../components/CustomError";
 import ClipLoader from "react-spinners/ClipLoader";
+
+const Card = lazy(() =>
+  import(/* webpackChunkName: "TorrentCard" */ "./TorrentCard")
+);
+const ServerError = lazy(() => {
+  return import(/* webpackChunkName: "ServerError" */ "./ServerError");
+});
+
+const NoContentFound = lazy(() => {
+  return import(/* webpackChunkName: "NoContentFound" */ "./NoContentFound");
+});
 class TorrentTab extends Component {
   PROXY_URL = "https://cors-anywhere.herokuapp.com/";
   state = {
@@ -32,7 +42,6 @@ class TorrentTab extends Component {
       .catch((err) => {
         console.log(err);
       });
-
     setTimeout(this.setServerIsWaking, 10000);
   }
 
@@ -46,7 +55,11 @@ class TorrentTab extends Component {
 
   render() {
     if (this.state.no_content_found) {
-      return <NoContentFound />;
+      return (
+        <Suspense fallback={<div>Loading...</div>}>
+          <NoContentFound />;
+        </Suspense>
+      );
     } else if (this.state.torrents === undefined) {
       return this.state.server_is_waking ? (
         <div className="container p-5">
@@ -64,7 +77,11 @@ class TorrentTab extends Component {
         </div>
       );
     } else if (this.state.server_error) {
-      return <ServerError />;
+      return (
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServerError />;
+        </Suspense>
+      );
     } else {
       return (
         <div className="row">
@@ -74,7 +91,10 @@ class TorrentTab extends Component {
                 className="col-lg-4 col-md-12 col-sm-12"
                 key={`${this.props.website}${index.toString()}`}
               >
-                <TorrentCard torrent={e} />
+                <Suspense fallback={<div>loading</div>}>
+                  <Card torrent={e} />
+                </Suspense>
+
                 <br></br>
               </div>
             );
