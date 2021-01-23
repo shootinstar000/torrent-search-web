@@ -7,7 +7,7 @@ function Result(props) {
     return Constants.indexer.map((e, index) => {
       const isActive = e.website === "1337x" ? "active" : "";
       return (
-        <li className="nav-item" Key={`nav${e.website}${index.toString}`}>
+        <li className="nav-item" key={`nav${e.website}${index.toString}`}>
           <a
             className={`nav-link ${isActive} nav-custom-link text-capitalize`}
             id={`nav-${e.website}-tab`}
@@ -33,13 +33,13 @@ function Result(props) {
           className={`container-fluid tab-pane ${isActive}`}
           role="tabpanel"
           aria-labelledby="nav-home-tab"
+          key={`tab${e.website}${index.toString}`}
         >
           <TorrentTab
             Key={index.toString}
             website={e.website}
             endpoint={e.endpoint}
             magnet-endpoint={e.magnet_endpoint}
-            Key={`tab${e.website}${index.toString}`}
             query={props.query}
           />
         </div>
