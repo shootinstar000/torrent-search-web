@@ -13,6 +13,7 @@ class App extends Component {
     e.preventDefault();
     const query = document.getElementById("search-input").value.trim();
     if (query.length > 0 && query !== this.state.search_query) {
+      document.getElementById("search-input").value = "";
       this.setState({
         show_result: true,
         search_query: query,
