@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Result from "./Result";
 import "./App.css";
-import $ from "jquery";
+import $ from "jquery/dist/jquery.slim";
 import Cookies from "js-cookie";
 class App extends Component {
   state = {
