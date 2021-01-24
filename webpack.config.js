@@ -48,9 +48,6 @@ let config = {
       template: "./public/index.html",
       filename: "./index.html", //relative to root of the application
     }),
-    new webpack.ProvidePlugin({
-      React: "react",
-    }),
   ],
 };
 
@@ -65,7 +62,6 @@ module.exports = (env, argv) => {
       open: true,
     };
     config.output.publicPath = "/";
-    config.output.chunkFilename = "[name].[chunkhash].bundle.js";
   }
 
   if (argv.mode === "production") {
