@@ -3,6 +3,8 @@ import TorrentCard from "./TorrentCard";
 import { getTorrents } from "../utils/network_utils";
 import { NoContentFound, ServerError } from "../components/CustomError";
 import ClipLoader from "react-spinners/ClipLoader";
+import { default as v4 } from "uuid/dist/v4";
+
 class TorrentTab extends Component {
   PROXY_URL = "https://cors-anywhere.herokuapp.com/";
   state = {
@@ -74,7 +76,7 @@ class TorrentTab extends Component {
                 className="col-lg-4 col-md-12 col-sm-12"
                 key={`${this.props.website}${index.toString()}`}
               >
-                <TorrentCard torrent={e} />
+                <TorrentCard torrent={e} Key={v4()} />
                 <br></br>
               </div>
             );
