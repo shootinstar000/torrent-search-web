@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { getMagnetLink } from "../utils/network_utils";
 import ClipLoader from "react-spinners/ClipLoader";
+import $ from "jquery/dist/jquery.slim";
+
 class TorrentCard extends Component {
   copyToClipBoard = (e) => {
+    $("#c" + this.props.Key).addClass("show");
     var mgDiv = document.getElementById(this.state.mgid);
     let selection = window.getSelection();
     let range = document.createRange();
@@ -11,6 +14,7 @@ class TorrentCard extends Component {
     selection.addRange(range);
     document.execCommand("copy");
     selection.removeAllRanges();
+    $("#c" + this.props.Key).removeClass("show");
   };
 
   onMangetBtnClick = (e) => {
