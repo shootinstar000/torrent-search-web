@@ -1,11 +1,14 @@
 import Axios from "axios";
 import * as Constants from "../Constants";
 
+const instance = Axios.create({ baseURL: Constants.BASE_URL, timeout: 10000 });
+
 export async function getMagnetLink(website, torrent_url) {
-  let url = `${Constants.BASE_URL}${website}_mg?url=${torrent_url}`;
+  const url = `${website}_mg?url=${torrent_url}`;
 
   return new Promise(function (resolve, reject) {
-    Axios.get(url)
+    instance
+      .get(url)
       .then((res) => {
         return resolve(res);
       })
@@ -16,10 +19,11 @@ export async function getMagnetLink(website, torrent_url) {
 }
 
 export async function getTorrents(endpoint, search) {
-  let url = `${Constants.BASE_URL}${endpoint}?search=${search}`;
+  const url = `${endpoint}?search=${search}`;
 
   return new Promise(function (resolve, reject) {
-    Axios.get(url)
+    instance
+      .get(url)
       .then((res) => {
         resolve(res);
       })
