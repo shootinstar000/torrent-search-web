@@ -12,6 +12,7 @@ class TorrentTab extends Component {
     no_content_found: false,
     server_error: false,
     server_is_waking: false,
+    retry: true,
   };
 
   componentDidMount() {
@@ -24,25 +25,57 @@ class TorrentTab extends Component {
         } else if (res.status === 204) {
           this.setState({
             no_content_found: true,
+            retry: false,
           });
         } else {
           this.setState({
             server_error: true,
+            retry: false,
           });
         }
       })
       .catch((err) => {
         console.log(err);
+        this.setState({
+          server_error: true,
+          retry: false,
+        });
       });
-
-    setTimeout(this.setServerIsWaking, 10000);
+    setInterval(this.setServerIsWaking, 10000);
   }
 
   setServerIsWaking = () => {
+    if (this.state.server_error) {
+      return;
+    }
     if (this.state.torrents === undefined) {
       this.setState({
         server_is_waking: true,
       });
+      if (this.state.retry) {
+        getTorrents(this.props.endpoint, this.props.query)
+          .then((res) => {
+            if (res.status === 200) {
+              this.setState({
+                torrents: res.data["data"],
+                server_is_waking: false,
+              });
+            } else if (res.status === 204) {
+              this.setState({
+                no_content_found: true,
+                server_is_waking: false,
+              });
+            } else {
+              this.setState({
+                server_error: true,
+                server_is_waking: false,
+              });
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
     }
   };
 
