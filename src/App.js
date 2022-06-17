@@ -176,7 +176,7 @@ class App extends Component {
                 alt="Sagar's MovieS Hub"
               ></img>
               <div>
-                <span className="h1 app-name">Torrent Search</span>
+                <span className="h1 app-name">Sagar MovieS Hub</span>
               </div>
               <div className="container center">
                 <div className="input-group input-group-lg mt-4">
