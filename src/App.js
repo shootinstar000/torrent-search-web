@@ -221,15 +221,15 @@ class App extends Component {
             <div className="row justify-content-center">
               <div className="m-2">
                 <a
-                  href="https://github.com/Torrent-Search/torrent-search-web"
+                  href="https://www.facebook.com/sagar.panja.904"
                   className="social-custom-link"
                 >
-                  <i className="devicon-github-original social-icons"></i>
+                  <i className="devicon-facebook-plain colored"></i>
                 </a>
               </div>
               <div className="m-2">
                 <a
-                  href="mailto:tejasvp25@gmail.com"
+                  href="mailto:sagarpanja20@gmail.com"
                   className="social-custom-link"
                 >
                   <i className="devicon-google-plain social-icons"></i>
@@ -247,7 +247,7 @@ class App extends Component {
           <div className="row justify-content-center text-center pt-1">
             <div className="row justify-content-center text-secondary">
               <span className="text-secondary">
-                Tejasvp25 © 2020 · Made with{" "}
+                SagarPanja © 2022 · Made with{" "}
                 <span role="img">
                   <img
                     src="https://madewithlove.org.in/favicon-16x16.png?v=ngkxyOrw9y"
@@ -260,7 +260,7 @@ class App extends Component {
             </div>{" "}
           </div>
           <this.TermsAndConditionsLayout />
-          <a href="https://www.buymeacoffee.com/tejasvp25" target="_blank">
+          <a href="https://upayi.ml/sagarpanja1-3@okhdfcbank/49" target="_blank">
             <img
               src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png"
               alt="Buy Me A Coffee"
