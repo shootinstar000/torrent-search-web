@@ -247,7 +247,7 @@ class App extends Component {
           <div className="row justify-content-center text-center pt-1">
             <div className="row justify-content-center text-secondary">
               <span className="text-secondary">
-                SagarPanja © 2022 · Made with{" "}
+                SagarPanja ©2022 · Made with{" "}
                 <span role="img">
                   <img
                     src="https://madewithlove.org.in/favicon-16x16.png?v=ngkxyOrw9y"
