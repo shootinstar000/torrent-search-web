@@ -173,7 +173,7 @@ class App extends Component {
               <img
                 className=" app-logo img-fluid"
                 src="app_icon.png"
-                alt="Torrent Search"
+                alt="Sagar's MovieS Hub"
               ></img>
               <div>
                 <span className="h1 app-name">Torrent Search</span>
@@ -184,7 +184,7 @@ class App extends Component {
                     id="search-input"
                     type="text"
                     className="form-control input-red"
-                    placeholder="Search Here"
+                    placeholder="Type movie or series name here"
                     autoComplete="off"
                   ></input>
                 </div>
